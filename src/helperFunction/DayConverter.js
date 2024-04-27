@@ -12,7 +12,7 @@ const daysOfWeek = [
 
 const weekData = [];
 
-for (let i = 0; i < 7; i++) {
+for (let i = 1; i < 6; i++) {
   const newDate = new Date(today);
   newDate.setDate(today.getDate() + i * daysToAdd);
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { BsSearch } from "react-icons/bs";
 import Lottie from "react-lottie-player";
-import { Col, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import { MdAir } from "react-icons/md";
 import { WiHumidity, WiSunrise } from "react-icons/wi";
 import { MdVisibility } from "react-icons/md";
@@ -296,7 +296,7 @@ function WeatherPage() {
                   md={6}
                   sm={6}
                   xs={12}
-                  className="forcast-five-days mx-auto"
+                  className="forcast-five-days"
                   key={index}
                 >
                   <p>{weekData[index].dayName}</p>

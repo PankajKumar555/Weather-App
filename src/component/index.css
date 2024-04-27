@@ -76,8 +76,6 @@
   margin: 10px;
   white-space: nowrap; 
   padding: 1rem;
-  width: 10rem;
-
 }
 .forcast-five-days-animation{
     margin: 1rem 0px;
@@ -102,5 +100,8 @@
     display: block;
     margin: 0px 1rem;
     padding-bottom: 2rem;
+    }
+    .forcast-five-days{
+        margin: 10px auto;
     }
 }
