@@ -25,7 +25,7 @@ function WeatherPage() {
   const [location, setLocation] = useState("Delhi");
   const [sunRise, setSunRise] = useState();
   const [sunSet, setSunSet] = useState();
-  const [time, setTime] = useState(new Date());
+  // const [time, setTime] = useState(new Date());
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=17a7566a835af1a26cb60882e0346245`;
   const urlSevendays = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=17a7566a835af1a26cb60882e0346245&cnt`;
@@ -68,11 +68,11 @@ function WeatherPage() {
   };
 
   const showTime =
-    addLeadingZero(time.getHours()) +
+    addLeadingZero(new Date().getHours()) +
     ":" +
-    addLeadingZero(time.getMinutes()) +
+    addLeadingZero(new Date().getMinutes()) +
     ":" +
-    addLeadingZero(time.getSeconds());
+    addLeadingZero(new Date().getSeconds());
 
   const showDate = date.getDate() + " " + month + " " + date.getFullYear();
 
@@ -132,13 +132,13 @@ function WeatherPage() {
     }
   };
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTime(new Date());
-    }, 1000);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setTime(new Date());
+  //   }, 1000);
 
-    return () => clearInterval(intervalId);
-  }, []);
+  //   return () => clearInterval(intervalId);
+  // }, []);
 
   useEffect(() => {
     if (data !== null) {
@@ -296,7 +296,7 @@ function WeatherPage() {
                   md={6}
                   sm={6}
                   xs={12}
-                  className="forcast-five-days"
+                  className="forcast-five-days mx-auto"
                   key={index}
                 >
                   <p>{weekData[index].dayName}</p>
